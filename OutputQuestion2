@@ -1,0 +1,23 @@
+Output 1:
+Enter sales : RM175
+Enter hours worked : 10
+Commision : RM8.75
+Daily wages : RM58.75
+
+Output 2:
+Enter sales : RM350
+Enter hours worked : 10
+Commision : RM35.0
+Daily wages : RM85.0
+
+Output 3:
+Enter sales : RM600
+Enter hours worked : 10
+Commision : RM90.0
+Daily wages : RM140.0
+
+Output 4:
+Enter sales : RM120
+Enter hours worked : 10
+No commision for sales under RM150
+Daily wages : RM50.0
