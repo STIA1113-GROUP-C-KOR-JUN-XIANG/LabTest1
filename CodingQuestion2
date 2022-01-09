@@ -1,0 +1,47 @@
+package Quiz1;
+import java.util.Scanner;
+public class Wages {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int hour;
+		double sales, com, wages,dailywages ;
+		System.out.print("Enter sales : RM");
+		sales = sc.nextDouble();
+		System.out.print("Enter hours worked : ");
+		hour = sc.nextInt();
+		if(sales >= 150 && sales<=300) 
+		{
+			com = sales*5/100;
+			wages = 5*hour;
+			dailywages = wages + com;
+			System.out.println("Commision : RM"+com);
+			System.out.println("Daily wages : RM"+dailywages);
+		}
+		else if(sales >= 301 && sales<=500)
+		{
+			com = sales*10/100;
+			wages = 5*hour;
+			dailywages = wages + com;
+			System.out.println("Commision : RM"+com);
+			System.out.println("Daily wages : RM"+dailywages);
+		}
+		else if(sales > 500)
+		{
+			com = sales*15/100;
+			wages = 5*hour;
+			dailywages = wages + com;
+			System.out.println("Commision : RM"+com);
+			System.out.println("Daily wages : RM"+dailywages);
+		}
+		else
+		{
+			wages = 5*hour;
+			System.out.println("No commision for sales under RM150");
+			System.out.println("Daily wages : RM"+wages);
+		}
+		sc.close();
+	}
+
+}
