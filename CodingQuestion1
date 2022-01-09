@@ -7,13 +7,13 @@ public class Market {
 		Scanner sc=new Scanner(System.in);
 		int reply;
 		
-		System.out.println("How many items you want ot buy? (maximum item:3) ");
+		System.out.println("Enter the number of items you want to buy (maximum item:3) :");
 		reply = sc.nextInt();
 		if (reply==3) 
 		{
 			int[]item = new int[reply];
 			int[]quantity = new int[reply];
-			int[]price = new int[reply];
+			double[]price = new double[reply];
 			for(int x=0; x<reply; x++) 
 			{
 				System.out.print("Enter the price of "+(x+1)+" item: RM");
@@ -22,25 +22,56 @@ public class Market {
 				quantity[x]=sc.nextInt();
 				price[x]=item[x]*quantity[x];
 			}
-				int totprice = price[0]+price[1]+price[2];
+				double totprice = price[0]+price[1]+price[2];
 			if(totprice>=100) 
 			{
-				int discount=totprice*20/100;
-				int paid=totprice - discount;
+				double discount=totprice*20/100;
+				double paid=totprice - discount;
 				System.out.println("Total price : RM"+totprice);
 				System.out.println("Discount received : RM"+discount);
 				System.out.println("Price to be paid : RM"+paid);
 			}
 			else if(totprice<100) 
 			{
-				int discount=totprice*10/100;
-				int paid=totprice - discount;
+				double discount=totprice*10/100;
+				double paid=totprice - discount;
 				System.out.println("Total price : RM"+totprice);
 				System.out.println("Discount received : RM"+discount);
 				System.out.println("Price to be paid : RM"+paid);
 			}
 		}
-		if (reply==2) 
+		else if (reply==2) 
+		{
+			int[]item = new int[reply];
+			int[]quantity = new int[reply];
+			double[]price = new double[reply];
+			for(int x=0; x<reply; x++) 
+			{
+				System.out.print("Enter the price of "+(x+1)+" item: RM");
+				item[x]=sc.nextInt();
+				System.out.print("Enter the quantity of "+(x+1)+" item: ");
+				quantity[x]=sc.nextInt();
+				price[x]=item[x]*quantity[x];
+			}
+			double totprice = price[0]+price[1];
+			if(totprice>=100) 
+			{
+				double discount=totprice*20/100;
+				double paid=totprice - discount;
+				System.out.println("Total price : RM"+totprice);
+				System.out.println("Discount received : RM"+discount);
+				System.out.println("Price to be paid : RM"+paid);
+			}
+			else if(totprice<100) 
+			{
+				double discount=totprice*10/100;
+				double paid=totprice - discount;
+				System.out.println("Total price : RM"+totprice);
+				System.out.println("Discount received : RM"+discount);
+				System.out.println("Price to be paid : RM"+paid);
+			}
+		}
+		else if (reply==1) 
 		{
 			int[]item = new int[reply];
 			int[]quantity = new int[reply];
@@ -53,55 +84,30 @@ public class Market {
 				quantity[x]=sc.nextInt();
 				price[x]=item[x]*quantity[x];
 			}
-				int totprice = price[0]+price[1];
+			double totprice = price[0];
 			if(totprice>=100) 
 			{
-				int discount=totprice*20/100;
-				int paid=totprice - discount;
+				double discount=totprice*20/100;
+				double paid=totprice - discount;
 				System.out.println("Total price : RM"+totprice);
 				System.out.println("Discount received : RM"+discount);
 				System.out.println("Price to be paid : RM"+paid);
 			}
 			else if(totprice<100) 
 			{
-				int discount=totprice*10/100;
-				int paid=totprice - discount;
+				double discount=totprice*10/100;
+				double paid=totprice - discount;
 				System.out.println("Total price : RM"+totprice);
 				System.out.println("Discount received : RM"+discount);
 				System.out.println("Price to be paid : RM"+paid);
 			}
 		}
-		if (reply==1) 
+		else
 		{
-			int[]item = new int[reply];
-			int[]quantity = new int[reply];
-			int[]price = new int[reply];
-			for(int x=0; x<reply; x++) 
-			{
-				System.out.print("Enter the price of "+(x+1)+" item: RM");
-				item[x]=sc.nextInt();
-				System.out.print("Enter the quantity of "+(x+1)+" item: ");
-				quantity[x]=sc.nextInt();
-				price[x]=item[x]*quantity[x];
-			}
-				int totprice = price[0];
-			if(totprice>=100) 
-			{
-				int discount=totprice*20/100;
-				int paid=totprice - discount;
-				System.out.println("Total price : RM"+totprice);
-				System.out.println("Discount received : RM"+discount);
-				System.out.println("Price to be paid : RM"+paid);
-			}
-			else if(totprice<100) 
-			{
-				int discount=totprice*10/100;
-				int paid=totprice - discount;
-				System.out.println("Total price : RM"+totprice);
-				System.out.println("Discount received : RM"+discount);
-				System.out.println("Price to be paid : RM"+paid);
-			}
+			System.out.println("ERROR FOUNDED!!");
+			System.out.println("Re-enter again number of items you want to buy.");
 		}
+		sc.close();
 	}
 
 }
