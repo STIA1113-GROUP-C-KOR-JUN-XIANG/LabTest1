@@ -1,0 +1,11 @@
+How many items you want ot buy? (maximum item:3) 
+3
+Enter the price of 1 item: RM150
+Enter the quantity of 1 item: 2
+Enter the price of 2 item: RM50
+Enter the quantity of 2 item: 3
+Enter the price of 3 item: RM30
+Enter the quantity of 3 item: 1
+Total price : RM480
+Discount received : RM96
+Price to be paid : RM384
